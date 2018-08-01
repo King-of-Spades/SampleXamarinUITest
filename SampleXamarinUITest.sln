@@ -1,0 +1,33 @@
+
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XamarinUITestApp", "XamarinUITestApp\XamarinUITestApp.csproj", "{CE9580EF-F255-4070-85AA-F552DB12D344}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XamarinUITestAppUITest", "XamarinUITestAppUITest\XamarinUITestAppUITest.csproj", "{3992BA2C-A2CB-464D-B423-41AF955E4902}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|iPhoneSimulator = Debug|iPhoneSimulator
+		Release|iPhone = Release|iPhone
+		Release|iPhoneSimulator = Release|iPhoneSimulator
+		Debug|iPhone = Debug|iPhone
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{CE9580EF-F255-4070-85AA-F552DB12D344}.Debug|iPhoneSimulator.ActiveCfg = Debug|iPhoneSimulator
+		{CE9580EF-F255-4070-85AA-F552DB12D344}.Debug|iPhoneSimulator.Build.0 = Debug|iPhoneSimulator
+		{CE9580EF-F255-4070-85AA-F552DB12D344}.Release|iPhone.ActiveCfg = Release|iPhone
+		{CE9580EF-F255-4070-85AA-F552DB12D344}.Release|iPhone.Build.0 = Release|iPhone
+		{CE9580EF-F255-4070-85AA-F552DB12D344}.Release|iPhoneSimulator.ActiveCfg = Release|iPhoneSimulator
+		{CE9580EF-F255-4070-85AA-F552DB12D344}.Release|iPhoneSimulator.Build.0 = Release|iPhoneSimulator
+		{CE9580EF-F255-4070-85AA-F552DB12D344}.Debug|iPhone.ActiveCfg = Debug|iPhone
+		{CE9580EF-F255-4070-85AA-F552DB12D344}.Debug|iPhone.Build.0 = Debug|iPhone
+		{3992BA2C-A2CB-464D-B423-41AF955E4902}.Debug|iPhoneSimulator.ActiveCfg = Debug|iPhoneSimulator
+		{3992BA2C-A2CB-464D-B423-41AF955E4902}.Debug|iPhoneSimulator.Build.0 = Debug|iPhoneSimulator
+		{3992BA2C-A2CB-464D-B423-41AF955E4902}.Release|iPhone.ActiveCfg = Release|iPhone
+		{3992BA2C-A2CB-464D-B423-41AF955E4902}.Release|iPhone.Build.0 = Release|iPhone
+		{3992BA2C-A2CB-464D-B423-41AF955E4902}.Release|iPhoneSimulator.ActiveCfg = Release|iPhoneSimulator
+		{3992BA2C-A2CB-464D-B423-41AF955E4902}.Release|iPhoneSimulator.Build.0 = Release|iPhoneSimulator
+		{3992BA2C-A2CB-464D-B423-41AF955E4902}.Debug|iPhone.ActiveCfg = Debug|iPhone
+		{3992BA2C-A2CB-464D-B423-41AF955E4902}.Debug|iPhone.Build.0 = Debug|iPhone
+	EndGlobalSection
+EndGlobal
