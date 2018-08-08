@@ -49,10 +49,11 @@ namespace XamarinUITestAppTest
         [Test]
         public void AppLaunches()
         {
-            //Helpers.StartSim();
+            //System.IO.FileInfo file = app.Screenshot("First screen.");
 
-            Assert.IsTrue(true);
-            //app.Screenshot("First screen.");
+            AppResult[] elem = app.Query(q => q.Marked("lblHW"));
+
+            Assert.IsTrue(elem.Count() > 0);
         }
     }
 }
