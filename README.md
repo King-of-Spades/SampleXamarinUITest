@@ -14,30 +14,31 @@ What things you need to install the software and how to install them
   
 ## Running the tests
 
-Start the XamarinUITestAppUITest project to run the UI test setup
+Run the tests in project XamarinUITestAppTest
 
 #### Runtime Error Stack Trace
 
-NUnit.Framework.Internal.NUnitException: Rethrown ---> System.IO.FileNotFoundException: Could not load file or assembly 'System.Runtime.Remoting, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089' or one of its dependencies.
-  at Xamarin.UITest.Utils.Integration.IdeConnection.Connect (System.String testAssemblyPath, Xamarin.UITest.Platform platform) [0x00017] in <1bd397951f434cd4913ddc08b7bc45af>:0
-  at Xamarin.UITest.Utils.Integration.IdeIntegrationClient.TryConnect (Xamarin.UITest.Platform platform) [0x0003a] in <1bd397951f434cd4913ddc08b7bc45af>:0
-  at Xamarin.UITest.iOS.iOSApp..ctor (Xamarin.UITest.Configuration.IiOSAppConfiguration appConfiguration, Xamarin.UITest.Shared.Execution.IExecutor executor) [0x0018f] in <1bd397951f434cd4913ddc08b7bc45af>:0
-  at Xamarin.UITest.iOS.iOSApp..ctor (Xamarin.UITest.Configuration.IiOSAppConfiguration appConfiguration) [0x00000] in <1bd397951f434cd4913ddc08b7bc45af>:0
-  at Xamarin.UITest.Configuration.iOSAppConfigurator.StartApp (Xamarin.UITest.Configuration.AppDataMode appDataMode) [0x00017] in <1bd397951f434cd4913ddc08b7bc45af>:0
-  at XamarinUITestAppUITest.ApplicationInit.AppInit (Xamarin.UITest.Platform platform) [0x0000a] in /Users/<useraccount>/Projects/SampleXamarinUITest/XamarinUITestAppUITest/ApplicationInit.cs:12
-  at XamarinUITestAppUITest.MainTest.SetUp () [0x00001] in /Users/<useraccount>/Projects/SampleXamarinUITest/XamarinUITestAppUITest/MainTest.cs:17
-  at at (wrapper managed-to-native) System.Reflection.MonoMethod.InternalInvoke(System.Reflection.MonoMethod,object,object[],System.Exception&)
-  at System.Reflection.MonoMethod.Invoke (System.Object obj, System.Reflection.BindingFlags invokeAttr, System.Reflection.Binder binder, System.Object[] parameters, System.Globalization.CultureInfo culture) [0x00032] in /Library/Frameworks/Xamarin.iOS.framework/Versions/11.12.0.4/src/Xamarin.iOS/mcs/class/corlib/System.Reflection/MonoMethod.cs:305
-  --- End of inner exception stack trace ---
-  at NUnit.Framework.Internal.Reflect.InvokeMethod (System.Reflection.MethodInfo method, System.Object fixture, System.Object[] args) [0x0001d] in /Users/builder/data/lanes/5944/64fece5f/source/xamarin-macios/external/mono/external/nunit-lite/NUnitLite-1.0.0/src/framework/Internal/Reflect.cs:220
-  at NUnit.Framework.Internal.Reflect.InvokeMethod (System.Reflection.MethodInfo method, System.Object fixture) [0x00000] in /Users/builder/data/lanes/5944/64fece5f/source/xamarin-macios/external/mono/external/nunit-lite/NUnitLite-1.0.0/src/framework/Internal/Reflect.cs:199
-  at NUnit.Framework.Internal.Commands.OneTimeSetUpCommand.Execute (NUnit.Framework.Internal.TestExecutionContext context) [0x00058] in /Users/builder/data/lanes/5944/64fece5f/source/xamarin-macios/external/mono/external/nunit-lite/NUnitLite-1.0.0/src/framework/Internal/Commands/OneTimeSetUpCommand.cs:63
-  at MonoTouch.NUnit.UI.TestCaseElement+<>c__DisplayClass0_0.<.ctor>b__0 () [0x00055] in /Users/builder/data/lanes/5944/64fece5f/source/xamarin-macios/external/Touch.Unit/NUnitLite/TouchRunner/TestCaseElement.cs:53
-  at MonoTouch.Dialog.StringElement.Selected (MonoTouch.Dialog.DialogViewController dvc, UIKit.UITableView tableView, Foundation.NSIndexPath indexPath) [0x00008] in /Users/builder/data/lanes/5944/64fece5f/source/xamarin-macios/external/MonoTouch.Dialog/MonoTouch.Dialog/Elements.cs:765
-  at MonoTouch.Dialog.DialogViewController.Selected (Foundation.NSIndexPath indexPath) [0x00026] in /Users/builder/data/lanes/5944/64fece5f/source/xamarin-macios/external/MonoTouch.Dialog/MonoTouch.Dialog/DialogViewController.cs:577
-  at MonoTouch.Dialog.DialogViewController+Source.RowSelected (UIKit.UITableView tableView, Foundation.NSIndexPath indexPath) [0x00016] in /Users/builder/data/lanes/5944/64fece5f/source/xamarin-macios/external/MonoTouch.Dialog/MonoTouch.Dialog/DialogViewController.cs:402
-  at at (wrapper managed-to-native) UIKit.UIApplication.UIApplicationMain(int,string[],intptr,intptr)
-  at UIKit.UIApplication.Main (System.String[] args, System.IntPtr principal, System.IntPtr delegate) [0x00005] in /Library/Frameworks/Xamarin.iOS.framework/Versions/11.12.0.4/src/Xamarin.iOS/UIKit/UIApplication.cs:79
-  at UIKit.UIApplication.Main (System.String[] args, System.String principalClassName, System.String delegateClassName) [0x0002c] in /Library/Frameworks/Xamarin.iOS.framework/Versions/11.12.0.4/src/Xamarin.iOS/UIKit/UIApplication.cs:63
-  at XamarinUITestAppUITest.Application.Main (System.String[] args) [0x00001] in /Users/<useraccount>/Projects/SampleXamarinUITest/XamarinUITestAppUITest/Main.cs:17
+Xamarin.UITest.XDB.Exceptions.DeviceAgentException : Failed to install DeviceAgent
 
+ExitCode: 1
+
+		-c,--codesign-identity	<codesign-identifier> [OPTIONAL] 	Identity used to codesign app bundle [device only]. Deprecated - should use profile path.	DEFAULT=
+		-d,--device-id	<device-identifier>	iOS Simulator GUID or 40-digit physical device ID
+		-f,--force	<force-reinstall-app> [OPTIONAL] 	Reinstall the app if the device contains an older version than the bundle specified	DEFAULT=0
+		-i,--resources-path	<resources-path> [OPTIONAL] 	Path to resources (executables) to inject into app directory. A list of colon separated files may be specified.
+		-p,--profile-path	<profile-path> [OPTIONAL] 	Path to provisioning profile
+	install <app-path>
+App com.apple.test.DeviceAgent-Runner is not installed on 62CC51D4-A834-4697-8715-4AB9B16FA336
+Error installing application: Error Domain=com.facebook.FBSimulatorControl Code=0 "Simulator does not support any of the architectures ([x86_64, i386]) of the executable at /var/folders/0r/r3b8jxr92jx1kgg8c802phq40000gn/T/xdb/DeviceAgent.iOS.Dependencies/9a7eae887a041f733c06f5eef3e12600/app/DeviceAgent-Runner.app/DeviceAgent-Runner. Simulator Archs ([(null)])" UserInfo={NSLocalizedDescription=Simulator does not support any of the architectures ([x86_64, i386]) of the executable at /var/folders/0r/r3b8jxr92jx1kgg8c802phq40000gn/T/xdb/DeviceAgent.iOS.Dependencies/9a7eae887a041f733c06f5eef3e12600/app/DeviceAgent-Runner.app/DeviceAgent-Runner. Simulator Archs ([(null)])}
+Stack trace:
+  at Xamarin.UITest.XDB.Services.iOSDeviceAgentService.WithErrorHandling (System.Int32 eventId, System.Func`1[TResult] action, System.String errorMessage, System.Int32[] successCodes) [0x000c1] in <1bd397951f434cd4913ddc08b7bc45af>:0 
+  at Xamarin.UITest.XDB.Services.iOSDeviceAgentService+<LaunchTestAsync>c__async6.MoveNext () [0x002c7] in <1bd397951f434cd4913ddc08b7bc45af>:0 
+--- End of stack trace from previous location where exception was thrown ---
+  at Xamarin.UITest.iOS.iOSAppLauncher.LaunchAppLocal (Xamarin.UITest.Configuration.IiOSAppConfiguration appConfiguration, Xamarin.UITest.Shared.Http.HttpClient httpClient, System.Boolean clearAppData) [0x00216] in <1bd397951f434cd4913ddc08b7bc45af>:0 
+  at Xamarin.UITest.iOS.iOSAppLauncher.LaunchApp (Xamarin.UITest.Configuration.IiOSAppConfiguration appConfiguration, Xamarin.UITest.Shared.Http.HttpClient httpClient, Xamarin.UITest.TestCloud.TestCloudiOSAppConfiguration testCloudAppConfiguration, Xamarin.UITest.Shared.Http.HttpClient testCloudWsClient, Xamarin.UITest.Shared.Http.HttpClient xtcServicesClient, System.Boolean testCloudUseDeviceAgent) [0x0007a] in <1bd397951f434cd4913ddc08b7bc45af>:0 
+  at Xamarin.UITest.iOS.iOSApp..ctor (Xamarin.UITest.Configuration.IiOSAppConfiguration appConfiguration, Xamarin.UITest.Shared.Execution.IExecutor executor) [0x002de] in <1bd397951f434cd4913ddc08b7bc45af>:0 
+  at Xamarin.UITest.iOS.iOSApp..ctor (Xamarin.UITest.Configuration.IiOSAppConfiguration appConfiguration) [0x00000] in <1bd397951f434cd4913ddc08b7bc45af>:0 
+  at Xamarin.UITest.Configuration.iOSAppConfigurator.StartApp (Xamarin.UITest.Configuration.AppDataMode appDataMode) [0x00017] in <1bd397951f434cd4913ddc08b7bc45af>:0 
+  at XamarinUITestAppTest.Tests.BeforeEachTest () [0x0000c] in /Users/machinename/Projects/SampleXamarinUITest/XamarinUITestAppTest/Tests.cs:39 
+  at (wrapper managed-to-native) System.Reflection.MonoMethod.InternalInvoke(System.Reflection.MonoMethod,object,object[],System.Exception&)
+  at System.Reflection.MonoMethod.Invoke (System.Object obj, System.Reflection.BindingFlags invokeAttr, System.Reflection.Binder binder, System.Object[] parameters, System.Globalization.CultureInfo culture) [0x00032] in /Users/builder/jenkins/workspace/build-package-osx-mono/2017-12/external/bockbuild/builds/mono-x64/mcs/class/corlib/System.Reflection/MonoMethod.cs:305 
