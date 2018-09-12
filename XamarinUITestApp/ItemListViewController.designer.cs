@@ -7,11 +7,12 @@
 using Foundation;
 using System;
 using System.CodeDom.Compiler;
+using UIKit;
 
 namespace XamarinUITestApp
 {
-    [Register ("ViewController")]
-    partial class ViewController
+    [Register ("ItemListViewController")]
+    partial class ItemListViewController
     {
         void ReleaseDesignerOutlets ()
         {
