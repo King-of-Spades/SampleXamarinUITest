@@ -124,6 +124,14 @@
       <DependentUpon>ItemListViewController.cs</DependentUpon>
     </Compile>
     <Compile Include="FirstMainDataSource.cs" />
+    <Compile Include="FavViewController.cs" />
+    <Compile Include="FavViewController.designer.cs">
+      <DependentUpon>FavViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DetailTabBarController.cs" />
+    <Compile Include="DetailTabBarController.designer.cs">
+      <DependentUpon>DetailTabBarController.cs</DependentUpon>
+    </Compile>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
 </Project>

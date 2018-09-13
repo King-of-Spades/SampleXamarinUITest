@@ -10,6 +10,7 @@ namespace XamarinUITestApp
         string[] dataSet;
         string CellIdentifier = "TableCell";
         ItemListViewController _ItemListControl;
+        DetailTabBarController _detailTabs;
 
         public FirstMainDataSource(string[] data, UIViewController home)
         {
@@ -25,6 +26,7 @@ namespace XamarinUITestApp
         void Initialize()
         {
             _ItemListControl = homeScreen.Storyboard.InstantiateViewController("ItemListViewController") as ItemListViewController;
+            _detailTabs = homeScreen.Storyboard.InstantiateViewController("DetailTabBarController") as DetailTabBarController;
         }
 
         public override UITableViewCell GetCell(UITableView tableView, NSIndexPath indexPath)
@@ -53,17 +55,25 @@ namespace XamarinUITestApp
         {
             if (_ItemListControl != null)
             {
-                _ItemListControl.Mode = dataSet[indexPath.Row];
 
                 tableView.DeselectRow(indexPath, true);
 
-                homeScreen.NavigationController.PushViewController(_ItemListControl, true);
+                if (dataSet[indexPath.Row] == "Tab Test" && _detailTabs != null)
+                {
+                    homeScreen.NavigationController.PushViewController(_detailTabs, true);
+                }
+                else
+                {
+                    _ItemListControl.Mode = dataSet[indexPath.Row];
+
+                    homeScreen.NavigationController.PushViewController(_ItemListControl, true);
+                }
             }
         }
 
         public override bool CanEditRow(UITableView tableView, NSIndexPath indexPath)
         {
-            return true;
+            return false;
         }
 
         public override void CommitEditingStyle(UITableView tableView, UITableViewCellEditingStyle editingStyle, NSIndexPath indexPath)

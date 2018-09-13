@@ -17,7 +17,7 @@ namespace XamarinUITestApp
         {
             base.ViewDidLoad();
 
-            string[] values = new string[] { "Fencers", "Venues", "Tournaments" };
+            string[] values = new string[] { "Fencers", "Bouts", "Tab Test" };
 
             this.TableView.AllowsSelection = true;
             this.TableView.Source = new FirstMainDataSource(values, this);
