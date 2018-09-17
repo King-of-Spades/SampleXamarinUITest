@@ -7,12 +7,11 @@
 using Foundation;
 using System;
 using System.CodeDom.Compiler;
-using UIKit;
 
-namespace XamarinUITestApp
+namespace XamarinUITestApp.Controls
 {
-    [Register ("DetailTabBarController")]
-    partial class DetailTabBarController
+    [Register ("AdControl")]
+    partial class AdControl
     {
         void ReleaseDesignerOutlets ()
         {

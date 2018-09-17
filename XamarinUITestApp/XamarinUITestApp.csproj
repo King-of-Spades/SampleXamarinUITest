@@ -98,6 +98,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Resources\" />
+    <Folder Include="Controls\" />
   </ItemGroup>
   <ItemGroup>
     <InterfaceDefinition Include="LaunchScreen.storyboard" />
@@ -132,6 +133,7 @@
     <Compile Include="DetailTabBarController.designer.cs">
       <DependentUpon>DetailTabBarController.cs</DependentUpon>
     </Compile>
+    <Compile Include="Controls\AdControl.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
 </Project>
