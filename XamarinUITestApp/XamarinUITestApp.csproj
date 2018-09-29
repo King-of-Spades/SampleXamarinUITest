@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Xamarin.Build.Download.0.4.11\build\Xamarin.Build.Download.props" Condition="Exists('..\packages\Xamarin.Build.Download.0.4.11\build\Xamarin.Build.Download.props')" />
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">iPhoneSimulator</Platform>
@@ -91,6 +92,9 @@
     <Reference Include="Calabash">
       <HintPath>..\packages\Xamarin.TestCloud.Agent.0.21.5\lib\Xamarin.iOS\Calabash.dll</HintPath>
     </Reference>
+    <Reference Include="Google.MobileAds">
+      <HintPath>..\packages\Xamarin.Google.iOS.MobileAds.7.31.0.2\lib\Xamarin.iOS10\Google.MobileAds.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Contents.json" />
@@ -133,7 +137,10 @@
     <Compile Include="DetailTabBarController.designer.cs">
       <DependentUpon>DetailTabBarController.cs</DependentUpon>
     </Compile>
-    <Compile Include="Controls\AdControl.cs" />
+    <Compile Include="Controls\AdControlV1.cs" />
+    <Compile Include="Controls\AdControlV2.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
+  <Import Project="..\packages\Xamarin.Build.Download.0.4.11\build\Xamarin.Build.Download.targets" Condition="Exists('..\packages\Xamarin.Build.Download.0.4.11\build\Xamarin.Build.Download.targets')" />
+  <Import Project="..\packages\Xamarin.Google.iOS.MobileAds.7.31.0.2\build\Xamarin.Google.iOS.MobileAds.targets" Condition="Exists('..\packages\Xamarin.Google.iOS.MobileAds.7.31.0.2\build\Xamarin.Google.iOS.MobileAds.targets')" />
 </Project>

@@ -1,5 +1,6 @@
 ﻿using Foundation;
 using UIKit;
+using Google.MobileAds;
 
 namespace XamarinUITestApp
 {
@@ -28,8 +29,11 @@ namespace XamarinUITestApp
             // being included in the released version of the application.
             #if ENABLE_TEST_CLOUD
                 Xamarin.Calabash.Start();
-            #endif
+#endif
             #endregion
+
+            // Register Google AdMob App (MyScore FE)
+            MobileAds.Configure("ca-app-pub-5459834761104414~5273082917");
 
             return true;
         }
