@@ -136,7 +136,7 @@
         <!--View Controller-->
         <scene sceneID="5058">
             <objects>
-                <viewController id="5059" sceneMemberID="viewController">
+                <viewController id="5059" sceneMemberID="viewController" customClass="MoreTabViewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="5054"/>
                         <viewControllerLayoutGuide type="bottom" id="5055"/>
@@ -153,9 +153,21 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <pickerView contentMode="scaleToFill" id="7419" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES" showsSelectionIndicator="NO">
+                                <rect key="frame" x="20" y="411" width="182" height="81"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            </pickerView>
+                            <pickerView contentMode="scaleToFill" id="8492" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES" showsSelectionIndicator="NO">
+                                <rect key="frame" x="210" y="411" width="182" height="81"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            </pickerView>
                         </subviews>
                     </view>
                     <tabBarItem key="tabBarItem" systemItem="more" id="5061"/>
+                    <connections>
+                        <outlet property="pklTest" destination="7419" id="name-outlet-7419"/>
+                        <outlet property="pklTest2" destination="8492" id="name-outlet-8492"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5062" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
