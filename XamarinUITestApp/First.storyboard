@@ -15,7 +15,7 @@
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="celMain" id="211">
-                                <rect key="frame" x="0.0" y="28" width="414" height="44"/>
+                                <rect key="frame" x="0.0" y="72" width="414" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="211" id="212">
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
@@ -27,9 +27,9 @@
                             <outlet property="dataSource" destination="206" id="209"/>
                             <outlet property="delegate" destination="206" id="210"/>
                         </connections>
-                        <view contentMode="scaleToFill" id="7194" customClass="AdControl" key="tableFooterView">
-                            <rect key="frame" x="0.0" y="72" width="414" height="44"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                        <view contentMode="scaleToFill" id="9368" customClass="AdControl" key="tableHeaderView">
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <color key="backgroundColor" colorSpace="calibratedRGB" red="1" green="0.53725490196078429" blue="0.96862745098039216" alpha="1"/>
                             <userDefinedRuntimeAttributes>
                                 <userDefinedRuntimeAttribute type="string" keyPath="AdUnitID" value="ca-app-pub-3940256099942544/6300978111"/>

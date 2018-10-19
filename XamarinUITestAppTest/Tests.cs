@@ -55,5 +55,11 @@ namespace XamarinUITestAppTest
 
             Assert.IsTrue(elem.Count() > 0);
         }
+
+        [Test]
+        public void ReplTest()
+        {
+            app.Repl();
+        }
     }
 }

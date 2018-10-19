@@ -89,11 +89,11 @@
     <Reference Include="System.Xml" />
     <Reference Include="System.Core" />
     <Reference Include="Xamarin.iOS" />
-    <Reference Include="Calabash">
-      <HintPath>..\packages\Xamarin.TestCloud.Agent.0.21.5\lib\Xamarin.iOS\Calabash.dll</HintPath>
-    </Reference>
     <Reference Include="Google.MobileAds">
       <HintPath>..\packages\Xamarin.Google.iOS.MobileAds.7.31.0.2\lib\Xamarin.iOS10\Google.MobileAds.dll</HintPath>
+    </Reference>
+    <Reference Include="Calabash">
+      <HintPath>..\packages\Xamarin.TestCloud.Agent.0.21.7\lib\Xamarin.iOS\Calabash.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>

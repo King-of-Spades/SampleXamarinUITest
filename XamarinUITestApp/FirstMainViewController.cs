@@ -34,15 +34,15 @@ namespace XamarinUITestApp
             //this.TableView.TableFooterView = _ad;
 
             // setup banner ad
-            _adView = new BannerView(AdSizeCons.Banner);
+            //_adView = new BannerView(AdSizeCons.Banner);
 
 
-            _adView.AdUnitID = "ca-app-pub-3940256099942544/6300978111";
-            _adView.RootViewController = this;
+            //_adView.AdUnitID = "ca-app-pub-3940256099942544/6300978111";
+            //_adView.RootViewController = this;
 
-            AddBannerAd(_adView);
+            //AddBannerAd(_adView);
 
-            _adView.LoadRequest(request: GetAdRequest());
+            //_adView.LoadRequest(request: GetAdRequest());
         }
 
         void AddBannerAd(BannerView adView)
