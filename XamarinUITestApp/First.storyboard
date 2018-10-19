@@ -85,13 +85,47 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="celSubTable" id="3674">
-                                <rect key="frame" x="0.0" y="28" width="414" height="44"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="celSubTable" id="3674" customClass="ListItemTableViewCell" rowHeight="79">
+                                <rect key="frame" x="0.0" y="28" width="414" height="79"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="3674" id="3675">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="78.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label 1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="9805" translatesAutoresizingMaskIntoConstraints="NO" misplaced="YES" ambiguous="YES">
+                                            <rect key="frame" x="38" y="8" width="113" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label 3" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="9807" translatesAutoresizingMaskIntoConstraints="NO" misplaced="YES">
+                                            <rect key="frame" x="246" y="8" width="93" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label 2" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="10247" translatesAutoresizingMaskIntoConstraints="NO" misplaced="YES" ambiguous="YES">
+                                            <rect key="frame" x="38" y="37" width="113" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint id="10484" firstAttribute="bottom" secondItem="10247" secondAttribute="bottom" constant="19"/>
+                                        <constraint id="10924" firstItem="9805" firstAttribute="leading" secondItem="3675" secondAttribute="leading" constant="38"/>
+                                        <constraint id="10925" firstItem="9805" firstAttribute="top" secondItem="3675" secondAttribute="top" constant="8"/>
+                                        <constraint id="10926" firstItem="10247" firstAttribute="top" secondItem="9805" secondAttribute="bottom" constant="8"/>
+                                        <constraint id="10927" firstItem="9807" firstAttribute="top" secondItem="3675" secondAttribute="top" constant="8"/>
+                                        <constraint id="10928" firstAttribute="trailing" secondItem="9807" secondAttribute="trailing" constant="75"/>
+                                        <constraint id="11166" firstItem="10247" firstAttribute="leading" secondItem="3675" secondAttribute="leading" constant="38"/>
+                                    </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="lblLabel1" destination="9805" id="name-outlet-9805"/>
+                                    <outlet property="lblLabel3" destination="9807" id="name-outlet-9807"/>
+                                    <outlet property="lblLabel2" destination="10247" id="name-outlet-10247"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>

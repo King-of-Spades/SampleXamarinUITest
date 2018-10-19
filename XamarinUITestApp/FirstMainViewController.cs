@@ -10,7 +10,7 @@ namespace XamarinUITestApp
     {
         Controls.AdControlV1 _ad;
 
-        BannerView _adView;
+        //BannerView _adView;
         
         public FirstMainViewController(IntPtr handle) 
             : base(handle)
