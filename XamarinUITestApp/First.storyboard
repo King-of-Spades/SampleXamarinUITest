@@ -266,7 +266,7 @@
         <!--Item-->
         <scene sceneID="5668">
             <objects>
-                <viewController id="5669" sceneMemberID="viewController">
+                <viewController id="5669" sceneMemberID="viewController" customClass="ScrollViewController" storyboardIdentifier="ScrollViewController" useStoryboardIdentifierAsRestorationIdentifier="YES">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="5666"/>
                         <viewControllerLayoutGuide type="bottom" id="5667"/>
@@ -275,17 +275,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Item" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="6323" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES">
-                                <rect key="frame" x="90" y="331" width="42" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="5673"/>
+                    <tabBarItem key="tabBarItem" id="5673" systemItem="history"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5671" userLabel="First Responder" sceneMemberID="firstResponder"/>
