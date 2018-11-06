@@ -16,6 +16,10 @@ namespace XamarinUITestApp
     {
         [Outlet]
         [GeneratedCode ("iOS Designer", "1.0")]
+        UIKit.UILabel lblHint { get; set; }
+
+        [Outlet]
+        [GeneratedCode ("iOS Designer", "1.0")]
         UIKit.UILabel lblLabel1 { get; set; }
 
         [Outlet]
@@ -28,6 +32,11 @@ namespace XamarinUITestApp
 
         void ReleaseDesignerOutlets ()
         {
+            if (lblHint != null) {
+                lblHint.Dispose ();
+                lblHint = null;
+            }
+
             if (lblLabel1 != null) {
                 lblLabel1.Dispose ();
                 lblLabel1 = null;

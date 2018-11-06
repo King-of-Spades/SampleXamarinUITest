@@ -10,11 +10,13 @@ namespace XamarinUITestApp
         {
         }
 
-        internal void UpdateCell()
+        internal void UpdateCell(bool hint = false)
         {
             this.lblLabel1.Text = "Hello - L1";
             this.lblLabel2.Text = "Hi - L2";
             this.lblLabel3.Text = "Ola - L3";
+
+            this.lblHint.Hidden = !hint;
         }
     }
 }

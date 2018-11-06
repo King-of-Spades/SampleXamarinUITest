@@ -31,7 +31,7 @@ namespace XamarinUITestApp
         {
             ListItemTableViewCell cell = (ListItemTableViewCell)tableView.DequeueReusableCell("celSubTable", indexPath);
 
-            cell.UpdateCell();
+            cell.UpdateCell(indexPath.Row == 4);
 
             return cell;
         }
@@ -43,13 +43,20 @@ namespace XamarinUITestApp
 
         public override void RowSelected(UITableView tableView, NSIndexPath indexPath)
         {
-            UIAlertController okAlertController = UIAlertController.Create("test", "Hello World", UIAlertControllerStyle.Alert);
-            okAlertController.AddAction(UIAlertAction.Create("OK", UIAlertActionStyle.Default, _okAction));
-            okAlertController.AddAction(UIAlertAction.Create("Cancel", UIAlertActionStyle.Cancel, null));
-
             tableView.DeselectRow(indexPath, true);
 
-            _controller.PresentViewController(okAlertController, true, null);
+            if (indexPath.Row == 4)
+            {
+                UIAlertController okAlertController = UIAlertController.Create("test", "Hello World", UIAlertControllerStyle.Alert);
+                okAlertController.AddAction(UIAlertAction.Create("OK", UIAlertActionStyle.Default, _okAction));
+                okAlertController.AddAction(UIAlertAction.Create("Cancel", UIAlertActionStyle.Cancel, null));
+
+                _controller.PresentViewController(okAlertController, true, null);
+            }
+            else
+            {
+                _controller.NavigationController.PushViewController(_itemViewController, true);
+            }
         }
 
         public override nint NumberOfSections(UITableView tableView)

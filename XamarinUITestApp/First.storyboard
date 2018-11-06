@@ -110,6 +110,12 @@
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="*" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="11415" translatesAutoresizingMaskIntoConstraints="NO" hidden="YES" misplaced="YES">
+                                            <rect key="frame" x="366" y="0.0" width="42" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
                                     </subviews>
                                     <constraints>
                                         <constraint id="10484" firstAttribute="bottom" secondItem="10247" secondAttribute="bottom" constant="19"/>
@@ -119,12 +125,15 @@
                                         <constraint id="10927" firstItem="9807" firstAttribute="top" secondItem="3675" secondAttribute="top" constant="8"/>
                                         <constraint id="10928" firstAttribute="trailing" secondItem="9807" secondAttribute="trailing" constant="75"/>
                                         <constraint id="11166" firstItem="10247" firstAttribute="leading" secondItem="3675" secondAttribute="leading" constant="38"/>
+                                        <constraint id="11416" firstAttribute="trailing" secondItem="11415" secondAttribute="trailing" constant="6"/>
+                                        <constraint id="11417" firstItem="11415" firstAttribute="top" secondItem="3675" secondAttribute="top"/>
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
                                     <outlet property="lblLabel1" destination="9805" id="name-outlet-9805"/>
                                     <outlet property="lblLabel3" destination="9807" id="name-outlet-9807"/>
                                     <outlet property="lblLabel2" destination="10247" id="name-outlet-10247"/>
+                                    <outlet property="lblHint" destination="11415" id="name-outlet-11415"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -266,7 +275,7 @@
         <!--Item-->
         <scene sceneID="5668">
             <objects>
-                <viewController id="5669" sceneMemberID="viewController">
+                <viewController id="5669" sceneMemberID="viewController" customClass="ScrollViewController" storyboardIdentifier="ScrollViewController" useStoryboardIdentifierAsRestorationIdentifier="YES">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="5666"/>
                         <viewControllerLayoutGuide type="bottom" id="5667"/>
@@ -275,17 +284,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Item" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="6323" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES">
-                                <rect key="frame" x="90" y="331" width="42" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="5673"/>
+                    <tabBarItem key="tabBarItem" id="5673" systemItem="history"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5671" userLabel="First Responder" sceneMemberID="firstResponder"/>

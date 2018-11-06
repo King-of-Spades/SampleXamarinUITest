@@ -194,6 +194,7 @@ namespace XamarinUITestApp
                 Text = "Test Label",
                 TranslatesAutoresizingMaskIntoConstraints = false
             };
+
             label1.Font.WithSize(40f);
             scrollView.AddSubview(label1);
 
@@ -218,15 +219,6 @@ namespace XamarinUITestApp
             largeLabel.TopAnchor.ConstraintEqualTo(label1.BottomAnchor, 10f).Active = true;
             largeLabel.HeightAnchor.ConstraintEqualTo(250f).Active = true;
 
-            //NSMutableDictionary views = new NSMutableDictionary();
-            //views.Add(new NSString("label"), label);
-
-            //string format = "|-[label]-|";
-            //NSLayoutConstraint[] constraints = NSLayoutConstraint.FromVisualFormat(format, NSLayoutFormatOptions.AlignAllTop, null, views);
-            //NSLayoutConstraint.ActivateConstraints(constraints);
-            //}
-
         }
-
     }
 }
