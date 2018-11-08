@@ -49,11 +49,26 @@ namespace XamarinUITestAppTest
         [Test]
         public void AppLaunches()
         {
-            //System.IO.FileInfo file = app.Screenshot("First screen.");
-
             AppResult[] elem = app.Query(q => q.Marked("lblHW"));
 
-            Assert.IsTrue(elem.Count() > 0);
+            Assert.IsTrue(elem.Any());
+        }
+
+        [Test]
+        public void ItemDetailTest()
+        {
+            // setup
+            app.Tap(h => h.Text("Menu 1"));
+            app.WaitForElement(h => h.Text("Item List"));
+
+            app.Tap(h => h.Marked("itm1"));
+            app.WaitForElement(q => q.Text("Detail View"));
+
+            // run
+            AppResult[] text = app.Query(h => h.Class("UITextField"));
+
+            // assert
+            Assert.IsTrue(text.Any());
         }
 
         [Test]
