@@ -41,13 +41,18 @@ namespace XamarinUITestApp
             // Register Google AdMob App (MyScore FE)
             MobileAds.Configure("ca-app-pub-5459834761104414~5273082917");
 
-            // Crash Callback
-            Crashes.ShouldProcessErrorReport = (ErrorReport report) =>
-            {
+            //// Crash Callback
+            //Crashes.ShouldProcessErrorReport = (ErrorReport report) =>
+            //{
+            //    bool rt = true;
 
+            //    if (report.Id == string.Empty)
+            //    {
+            //        rt = false;
+            //    }
 
-                return true;
-            };
+            //    return rt;
+            //};
 
             return true;
         }
