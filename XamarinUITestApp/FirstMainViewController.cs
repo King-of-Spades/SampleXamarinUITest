@@ -22,7 +22,7 @@ namespace XamarinUITestApp
         {
             base.ViewDidLoad();
 
-            string[] values = new string[] { "Menu 1", "Menu 2", "Tab Test" };
+            string[] values = new string[] { "Menu 1", "Menu 2", "Tab Test", "Crash" };
 
             this.TableView.AllowsSelection = true;
             this.TableView.Source = new FirstMainDataSource(values, this);

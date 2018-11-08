@@ -1,6 +1,9 @@
 ﻿using Foundation;
 using UIKit;
 using Google.MobileAds;
+using Microsoft.AppCenter;
+using Microsoft.AppCenter.Analytics;
+using Microsoft.AppCenter.Crashes;
 
 namespace XamarinUITestApp
 {
@@ -32,8 +35,19 @@ namespace XamarinUITestApp
 #endif
             #endregion
 
+            // Register AppCenter app
+            AppCenter.Start("4b41b586-dced-44cf-b581-93073e694035", typeof(Analytics), typeof(Crashes));
+
             // Register Google AdMob App (MyScore FE)
             MobileAds.Configure("ca-app-pub-5459834761104414~5273082917");
+
+            // Crash Callback
+            Crashes.ShouldProcessErrorReport = (ErrorReport report) =>
+            {
+
+
+                return true;
+            };
 
             return true;
         }

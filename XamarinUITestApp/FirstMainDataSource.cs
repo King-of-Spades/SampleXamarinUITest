@@ -2,6 +2,8 @@
 using System;
 using System.Collections.Generic;
 using UIKit;
+using Microsoft.AppCenter.Analytics;
+using Microsoft.AppCenter.Crashes;
 
 namespace XamarinUITestApp
 {
@@ -53,21 +55,35 @@ namespace XamarinUITestApp
 
         public override void RowSelected(UITableView tableView, NSIndexPath indexPath)
         {
-            if (_ItemListControl != null)
+            try
             {
-
-                tableView.DeselectRow(indexPath, true);
-
-                if (dataSet[indexPath.Row] == "Tab Test" && _detailTabs != null)
+                if (_ItemListControl != null)
                 {
-                    homeScreen.NavigationController.PushViewController(_detailTabs, true);
-                }
-                else
-                {
-                    _ItemListControl.Mode = dataSet[indexPath.Row];
 
-                    homeScreen.NavigationController.PushViewController(_ItemListControl, true);
+                    tableView.DeselectRow(indexPath, true);
+
+                    if (dataSet[indexPath.Row] == "Tab Test" && _detailTabs != null)
+                    {
+                        Analytics.TrackEvent("Menu - Tab Test");
+                        homeScreen.NavigationController.PushViewController(_detailTabs, true);
+                    }
+                    else if (dataSet[indexPath.Row] == "Crash" && _detailTabs != null)
+                    {
+                        Analytics.TrackEvent("Menu - Crash");
+                        Crashes.GenerateTestCrash();
+                    }
+                    else
+                    {
+                        Analytics.TrackEvent(string.Format("Menu - {0}", dataSet[indexPath.Row]));
+                        _ItemListControl.Mode = dataSet[indexPath.Row];
+
+                        homeScreen.NavigationController.PushViewController(_ItemListControl, true);
+                    }
                 }
+            }
+            catch (Exception ex)
+            {
+                Crashes.TrackError(ex);
             }
         }
 
