@@ -7,7 +7,7 @@ namespace XamarinUITestApp
     public class ItemListDataSource : UITableViewSource
     {
         string[] _data;
-        string[] _sections;
+        readonly string[] _sections;
         UIViewController _controller;
         Action<UIAlertAction> _okAction;
         DetailViewController _itemViewController;

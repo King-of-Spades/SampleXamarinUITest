@@ -58,14 +58,14 @@ namespace XamarinUITestApp
 
             rows.Add(GetStackViewRow(cells.ToArray()));
 
-            cells = new List<UIView>()
+            cells = new List<UIView>
             {
                 GetLabel("Date Picker")
             };
 
             rows.Add(GetStackViewRow(cells.ToArray()));
 
-            cells = new List<UIView>()
+            cells = new List<UIView>
             {
                 GetDatePicker()
             };
@@ -103,7 +103,7 @@ namespace XamarinUITestApp
 
         UILabel GetLabel(string text)
         {
-            UILabel rt = new UILabel()
+            UILabel rt = new UILabel
             {
                 Text = text,
                 TranslatesAutoresizingMaskIntoConstraints = false
@@ -114,7 +114,7 @@ namespace XamarinUITestApp
 
         UITextField GetTextField(string placeHolder = null)
         {
-            UITextField rt = new UITextField()
+            UITextField rt = new UITextField
             {
                 Placeholder = placeHolder ?? string.Empty,
                 AutosizesSubviews = false,
@@ -174,7 +174,7 @@ namespace XamarinUITestApp
             };
             scrollView.AddSubview(rows);
 
-            UILabel label = new UILabel()
+            UILabel label = new UILabel
             {
                 Text = "Hello World",
                 TranslatesAutoresizingMaskIntoConstraints = false
@@ -189,7 +189,7 @@ namespace XamarinUITestApp
             label.WidthAnchor.ConstraintEqualTo(50f).Active = true;
 
 
-            UILabel label1 = new UILabel()
+            UILabel label1 = new UILabel
             {
                 Text = "Test Label",
                 TranslatesAutoresizingMaskIntoConstraints = false
@@ -205,7 +205,7 @@ namespace XamarinUITestApp
             label1.WidthAnchor.ConstraintEqualTo(label.WidthAnchor).Active = true;
 
 
-            UILabel largeLabel = new UILabel()
+            UILabel largeLabel = new UILabel
             {
                 BackgroundColor = UIColor.LightGray,
                 Text = "Large Text",

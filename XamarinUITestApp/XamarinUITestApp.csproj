@@ -138,7 +138,6 @@
       <DependentUpon>DetailTabBarController.cs</DependentUpon>
     </Compile>
     <Compile Include="Controls\AdControlV1.cs" />
-    <Compile Include="Controls\AdControlV2.cs" />
     <Compile Include="MoreTabViewController.cs" />
     <Compile Include="MoreTabViewController.designer.cs">
       <DependentUpon>MoreTabViewController.cs</DependentUpon>

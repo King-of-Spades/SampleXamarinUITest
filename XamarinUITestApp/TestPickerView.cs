@@ -5,10 +5,6 @@ namespace XamarinUITestApp
 {
     public class TestPickerView : UIPickerViewModel
     {
-        public TestPickerView()
-        {
-        }
-
         public override nint GetComponentCount(UIPickerView pickerView)
         {
             return 1;

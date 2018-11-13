@@ -19,7 +19,7 @@ namespace XamarinUITestApp
             Initialize();
         }
 
-        private UIViewController homeScreen = null;
+        UIViewController homeScreen;
 
         public UIViewController HomeScreen { get => homeScreen; set => homeScreen = value; }
 
@@ -91,6 +91,10 @@ namespace XamarinUITestApp
 
                     break;
                 case UITableViewCellEditingStyle.None:
+
+                    break;
+                default:
+
                     break;
             }
         }
