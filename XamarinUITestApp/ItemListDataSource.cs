@@ -33,6 +33,9 @@ namespace XamarinUITestApp
 
             cell.UpdateCell(indexPath.Row == 4);
 
+            cell.IsAccessibilityElement = true;
+            cell.AccessibilityIdentifier = string.Format("itm{0}", indexPath.Row.ToString());
+
             return cell;
         }
 
